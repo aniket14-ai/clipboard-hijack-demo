@@ -2,31 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clipboard Hijack Demo</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="terminal">
-    <div class="intro" id="intro">
-      <span class="typewriter-text">Initializing clipboard hijack demo...</span>
+  <canvas id="backgroundCanvas"></canvas>
+
+  <div class="airdrop-banner">
+    🎁 Claim 500 USDT Airdrop – Copy Wallet to Receive Instantly!
+  </div>
+
+  <div class="container">
+    <h1>🚨 Clipboard Hijack Demo</h1>
+    <p>This is a <span class="warn">safe educational simulation</span> showing how websites can hijack clipboard content.</p>
+
+    <div class="address-box">
+      <label for="wallet">Your Wallet Address:</label>
+      <input type="text" id="wallet" readonly value="1FAKEyBoTx3zzQ8ZfKoin3EV1XoYSmUhkL" />
+      <button class="pulse" onclick="copyAddress()">📋 Copy to Claim</button>
     </div>
 
-    <div class="content">
-      <h1>🧪 Clipboard Hijack Simulation</h1>
-      <p>This <span class="highlight">demo</span> shows how a malicious site could silently replace clipboard contents.</p>
+    <div class="log" id="log"></div>
 
-      <div class="box">
-        <label>Victim's Wallet Address:</label>
-        <input type="text" id="wallet" readonly value="1FAKEyBoTx3zzQ8ZfKoin3EV1XoYSmUhkL" />
-        <button onclick="copyAddress()">📋 Copy Address</button>
-      </div>
-
-      <div class="output" id="log"></div>
-    </div>
-
-    <footer>⚠️ Educational use only. No real data is affected.</footer>
+    <footer>
+      ⚠️ This is a harmless simulation for awareness. No real data is affected.
+    </footer>
   </div>
 
   <script src="script.js"></script>
